@@ -9,7 +9,7 @@ Default branch: `main`
 
 ## Git Workflow
 
-After every meaningful task, commit with a clean message and push to `origin/main`:
+Commit and push to `origin/main` continuously as work progresses — after every meaningful change, not just at the end of a task. This ensures work is never lost and the repo always reflects current state.
 
 ```bash
 git add <specific files>
@@ -17,12 +17,14 @@ git commit -m "descriptive message"
 git push
 ```
 
-Always include the co-author trailer in commits:
-```
-Co-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>
-```
-
-Never use `git add .` or `git add -A` — stage files explicitly by name.
+- Commit at logical checkpoints: new file created, feature working, bug fixed, significant edit made
+- Never batch up large amounts of work into a single commit — prefer small, focused commits
+- Always include the co-author trailer:
+  ```
+  Co-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>
+  ```
+- Never use `git add .` or `git add -A` — stage files explicitly by name
+- Write commit messages that describe *what changed and why*, not just "update file"
 
 ## Project Nature
 
